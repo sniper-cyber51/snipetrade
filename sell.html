@@ -1,0 +1,117 @@
+<html>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <nav>
+        <ul>
+            <li>
+                <button class="BTN1"><a href="index.html">Accueil</a>
+            </li></button>
+            <li>
+                <button class="BTN1"><a href="sell.html">Vendre</a></button>
+            </li>
+            <li>
+                <button class="BTN1"><a href="products.html">Acheter</a></button>
+            </li>
+            <li>
+                <button class="BTN1"><a href="à propos.html">A propos</a></button>
+            </li>
+            <li>
+                <button class="BTN1"><a href="contact.html">Contact</a></button>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<body class="sellpeper">
+    <div class="sell-form">
+        <h2>Vendre un produit</h2>
+        <form id="sellForm" enctype="multipart/form-data" action="connexionDB.php" method="post"><label
+                for="productName">Nom du produit:</label>
+            <input type="text" id="productName" name="product_Name" required>
+
+            <label for="productDescription">Description du produit:</label>
+            <textarea name="product_Description" id="productDescription" required maxlength="100"></textarea>
+
+            <label for="productPrice">Prix du produit en (en francs CFA):</label> <input type="number" id="productPrice"
+                name="product_Price" required>
+
+            <label for="commercialNumber">Numéro commercial:</label>
+            <input type="number" id="commercialNumber" name="commercial_Number" pattern="[0-9]*" required>
+
+            <label for="productImage">Image du produit:</label><input type="file" id="productImage" name="product_Image"
+                type="number" accept="image/*" required>
+            <button type="submit" name="Publier">Publier</button>
+        </form>
+    </div>
+
+
+    <Script>
+        const sellForm = document.getElementById('sellForm');
+        sellForm.addEventListener('submit', (event) => {
+            even.prevenDefault();
+            const productNameInput = document.getElementById('productName').value;
+            const productDescriptionInput = document.getElementById('productDescription').value;
+            const productPriceInput = document.getElementById('productPrice').value;
+            const commercialNumberInput = document.getElementById('commercialNumber').value;
+            const productImageInput = document.getElementById('productImage').files[0];
+        })
+
+        function getFormData() {
+            return {
+                productName: productNameInput.value,
+                productDescription: productDescriptionInput.value,
+                productPrice: productPriceInput.value,
+                commercialNumber: commercialNumberInput.value,
+                productImage: productImageInput.value,
+            };
+        }
+
+        function sendDataViaAjax() {
+            const data = getFormData();
+            fetch('/send-order', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Publier avec succès !');
+                    } else {
+                        alert('Erreur lors de la publication.');
+                    }
+                })
+                .catch(error => {
+                    alert('Une erreur est survenue lors de la publication.');
+                    console.error(error);
+                });
+        }
+        const form = document.querySelector('form');
+        form.addEventListener('submit',
+            (even) => {
+                even.prevenDefault();
+                sendDataViaAjax();
+            });
+
+        console.log('produit publier en vente:');
+        console.log('Nom du produit:', productName);
+        console.log('Description du produit:', productDescription);
+        console.log('Prix du produit (en francs CFA):', productPrice);
+        console.log('Numéro de commercial:', commercialNumber);
+        console.log('Image du produit:', productImage);
+
+        sellForm.reset();
+    </Script>
+</body>
+
+</html>
