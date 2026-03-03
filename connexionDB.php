@@ -1,11 +1,10 @@
 <?php
-
 // -----------------------------------------------------------------
 // 1. CONFIGURATION DE LA BASE DE DONNÉES (À ADAPTER !)
 // -----------------------------------------------------------------
 $host = "localhost"; // Généralement 'localhost'
 $port = '3306';
-$db = "monsite"; // Nom de la base de données
+$db = "monsite"; // Nom de la base de données 
 $user = "root"; // *À REMPLACER*
 $pass = '123456'; // *À REMPLACER*
 $charset = 'utf8mb4';
@@ -78,12 +77,13 @@ if (isset($_POST['Publier'])) {
 
         // Exécution
         $stmt->execute();
-
-        echo "✅ Félicitations ! Les données du produit ont été insérées avec succès dans la base de données (via PDO).";
+        header("Location: products.html");
+        exit();
+        // echo "✅ Félicitations ! Les données du produit ont été insérées avec succès dans la base de données (via PDO).";
     } catch (\PDOException $e) {
         // Gérer spécifiquement les erreurs SQL (par exemple, si une colonne est manquante)
-        echo "❌ Erreur lors de l'insertion : " . $e->getMessage();
+        // echo "❌ Erreur lors de l'insertion : " . $e->getMessage();
     }
 } else {
-    echo "Accès invalide. Veuillez soumettre le formulaire.";
+    // echo "Accès invalide. Veuillez soumettre le formulaire.";
 }

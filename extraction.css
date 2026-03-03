@@ -1,0 +1,136 @@
+body {
+    background-color: #314355;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+
+}
+
+#display-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Style de la carte bleue */
+.card {
+    background-color: #0d47a1;
+    width: 300px;
+    border-radius: 45px;
+    /* Très arrondi comme sur le design */
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Le carré blanc pour l'image */
+.image-container {
+    background-color: white;
+    width: 100%;
+    height: 250px;
+    border-radius: 35px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+/* Textes Prix et Nom */
+.details {
+    text-align: left;
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.price span {
+    color: #76ff03;
+    /* Vert fluo */
+}
+
+/* Bouton Buy */
+.buy-link {
+    display: inline-block;
+    background-color: #76ff03;
+    color: #000;
+    text-decoration: none;
+    padding: 10px 45px;
+    border-radius: 25px;
+    font-weight: 900;
+    margin: 15px 0;
+    transition: 0.3s;
+}
+
+.buy-link:hover {
+    transform: scale(1.1);
+    background-color: #64dd17;
+}
+
+/* Rectangle blanc de description au pied */
+.description-box {
+    background-color: white;
+    color: #333;
+    padding: 12px;
+    border-radius: 18px;
+    min-height: 40px;
+    font-size: 0.85em;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+.primary {
+    background: white;
+    color: #001F4D;
+}
+
+.secondary {
+    background: transparent;
+    color: white;
+}
+
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+
+
+
+/*--- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+    .container-main {
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .sell-form {
+        width: 90%;
+    }
+}

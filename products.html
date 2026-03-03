@@ -1,196 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acheter</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
-
+    <title>SNIPE BUY</title>
+    <link rel="stylesheet" href="extraction.css">
+    <link rel="shortcut icon" href="webIMG/snipeTrade.ico" type="image/x-icon">
 </head>
+<header>
+    <div class="nav-buttons">
+        <a href="products.html" class="btn primary">ACHETER</a>
+        <a href="sell.html" class="btn secondary">VENDRE</a>
+        <a href="accueil.html" class="btn primary">ACCUEIL</a>
+    </div>
+    <h2 style="text-align: center; color: #fefefe;">NOS PRODUITS</h2>
+</header>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <button class="BTN1"><a href="index.html">Accueil</a>
-                </li></button>
-                <li>
-                    <button class="BTN1"><a href="sell.html">Vendre</a></button>
-                </li>
-                <li>
-                    <button class="BTN1"><a href="products.html">Acheter</a></button>
-                </li>
-                <li>
-                    <button class="BTN1"><a href="à propos.html">A propos de Nous</a></button>
-                </li>
-                <li>
-                    <button class="BTN1"><a href="contact.html">Contact</a></button>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <h1 class="buy-form1">Produits en ventes</h1>
 
-
-    <div class="container">
-        <ul class="lightslider" id="cs-hidden">
-            <li class="item-a">
-                <div class="carte">
-                    <p class="sneakers">SNEAKERS</p>
-                    <img src="webIMG/paireNike.jpg" class="modele">
-                    <div class="detail">
-                        <h1>FCFA 6000,00</h1>
-                        <P>NIKE AIR <strong>MAG</strong></P>
-                        <a href="https://wa.me/+22651669597">
-                            <img src="webIMG/whatsapp.jpg" class="logo"></a>
-                    </div>
-                </div>
-            </li>
-
-            <li class="item-b">
-                <div class="carte">
-                    <p class="sneakers">COSTUME</p>
-                    <img src="webIMG/veste.jpg" class="modele">
-                    <div class="detail">
-                        <h1>FCFA 15000,00</h1>
-                        <P> <strong>VESTE</strong></P>
-                        <a href="https://wa.me/+22651669597">
-                            <img src="webIMG/whatsapp.jpg" class="logo">
-                        </a>
-                    </div>
-                </div>
-            </li>
-
-            <li class="item-c">
-                <div class="carte">
-                    <p class="lunettes">GLASS</p>
-                    <img src="webIMG/lunettes.jpg" class="modele">
-                    <div class="detail">
-                        <h1>FCFA 3000,00</h1>
-                        <P> <strong>VERRE CORRECTEUR</strong></P>
-                        <a href="https://wa.me/+22651669597">
-                            <img src="webIMG/whatsapp.jpg" class="logo">
-                        </a>
-                    </div>
-                </div>
-            </li>
-            <li class="item-d">
-                <div class="detail">
-                    <div class="carte">
-                        <p class="sneakers">FUSIl</p>
-                        <img src="webIMG/SV-98.jpg" class="modele">
-                        <div class="detail">
-                            <h1>FCFA 4.000.000,00</h1>
-                            <P>arme de précision <strong>SV-98</strong></P>
-                            <a href="https://wa.me/+22651669597">
-                                <img src="webIMG/whatsapp.jpg" class="logo">
-                            </a>
-                        </div>
-                    </div>
-            </li>
-
-            <li class="item-e">
-                <div class="carte">
-                    <p class="sneakers">SNEAKERS</p>
-                    <img src="webIMG/chaussure.jpg" class="modele">
-                    <div class="detail">
-                        <h1>FCFA 8000,00</h1>
-                        <P>air force FERME <strong>MAG</strong></P>
-                        <a href="https://wa.me/+22651669597">
-                            <img src="webIMG/whatsapp.jpg" class="logo">
-                        </a>
-                    </div>
-                </div>
-            </li>
-
-            <li class="item-f">
-                <div class="carte">
-                    <p class="sneakers">MONTRE</p>
-                    <img src="webIMG/montre.jpg" class="modele">
-                    <div class="detail">
-                        <h1>FCFA 5000,00</h1>
-                        <P>mini treuil <strong>CARDINO</strong></P>
-                        <a href="https://wa.me/+22651669597">
-                            <img src="webIMG/whatsapp.jpg" class="logo">
-                        </a>
-                    </div>
-                </div>
-            </li>
-
-            <li class="item-g">
-                <div class="carte">
-                    <p class="sneakers">SNEAKERS</p>
-                    <img src="webIMG/paireJORDAN.jpg" class="modele">
-                    <div class="detail">
-                        <h1>FCFA 12000,00</h1>
-                        <P>NIKE AIR <strong>JORDAN</strong></P>
-                        <a href="https://wa.me/+22651669597">
-                            <img src="webIMG/whatsapp.jpg" class="logo">
-                        </a>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+    <div id="display-area">
+        <p>Chargement des articles...</p>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
-
-
-
 
     <script>
-        // fonction pour récupérer les données des produits publiers par l'utilisateur
-        function getProductData() {
-            return fetch('/api/products')
-                .then(response => response.json())
-                .then(data => data)
+        function loadProducts() {
+            // Appel AJAX vers le fichier PHP
+            fetch('extraction.php')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('display-area').innerHTML = html;
+                })
                 .catch(error => {
-                    console.error('Erreur lors de la récupération des données des produits :', error);
-                    return [];
+                    console.error('Erreur lors du chargement:', error);
                 });
         }
 
-        // fonction pour afficher les produits
-        function displayProducts(products) {
-            const productsContainer = document.getElementById('product s-container');
-            products.forEach(product => {
-                const productElement = document.createElement('div');
-                productElement.classList.add('product');
-                productElement.innerHTML = `
-        
-        <img src"${product.imageUrl}"
-        alt="${product.name}"
-        class="product-image">
-        <h3>${product.name}</h3>
-             <p>${product.description}</p>
-             <p>Prix : ${product.price} FCFA</p>
-        <p>Numéro commercial du vendeur : ${product.sellerCommercialNumber}</p>     
-        
-        `;
-                productsContainer.appendChild(productElement);
-            });
-        }
+        // Charger les produits dès l'ouverture
+        loadProducts();
 
-        // fonction pour charger la page des produits.
-
-        function loadProductsPage() {
-            getProductData()
-                .then(products => {
-                    displayProducts(products);
-                });
-        }
-
-        // charger les produits lors du chargement de la page
-        document.addEventListener('DOMContentLoaded', loadProductsPage);
+        // Vérifier les nouvelles insertions toutes les 4 secondes
+        setInterval(loadProducts, 4000);
     </script>
 </body>
 

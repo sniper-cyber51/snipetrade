@@ -6,34 +6,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SNIPE SELL</title>
+    <link rel="stylesheet" href="sell.css">
 </head>
 <header>
-    <nav>
-        <ul>
-            <li>
-                <button class="BTN1"><a href="index.html">Accueil</a>
-            </li></button>
-            <li>
-                <button class="BTN1"><a href="sell.html">Vendre</a></button>
-            </li>
-            <li>
-                <button class="BTN1"><a href="products.html">Acheter</a></button>
-            </li>
-            <li>
-                <button class="BTN1"><a href="à propos.html">A propos</a></button>
-            </li>
-            <li>
-                <button class="BTN1"><a href="contact.html">Contact</a></button>
-            </li>
-        </ul>
-    </nav>
+    <div class="nav-buttons">
+        <a href="products.html" class="btn primary">ACHETER</a>
+        <a href="sell.html" class="btn secondary">VENDRE</a>
+        <a href="accueil.html" class="btn primary">ACCUEIL</a>
+    </div>
 </header>
 
 <body class="sellpeper">
+    <h2>Vendre un produit</h2>
     <div class="sell-form">
-        <h2>Vendre un produit</h2>
         <form id="sellForm" enctype="multipart/form-data" action="connexionDB.php" method="post"><label
                 for="productName">Nom du produit:</label>
             <input type="text" id="productName" name="product_Name" required>
@@ -44,11 +30,11 @@
             <label for="productPrice">Prix du produit en (en francs CFA):</label> <input type="number" id="productPrice"
                 name="product_Price" required>
 
-            <label for="commercialNumber">Numéro commercial:</label>
+            <label for="commercialNumber">Numéro whatsapp:</label>
             <input type="number" id="commercialNumber" name="commercial_Number" pattern="[0-9]*" required>
 
-            <label for="productImage">Image du produit:</label><input type="file" id="productImage" name="product_Image"
-                type="number" accept="image/*" required>
+            <label for="productImage">Image du produit:</label>
+            <input type="file" id="productImage" name="product_Image" type="number" accept="image/*" required>
             <button type="submit" name="Publier">Publier</button>
         </form>
     </div>
