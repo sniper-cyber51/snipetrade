@@ -43,7 +43,7 @@ label {
 }
 
 #sellForm {
-    background-color: #f3700b;
+    background-color: #F3700B;
     padding: 25px;
     border-radius: 50px;
     /* Arrondi prononcé comme sur l'image */
@@ -52,6 +52,10 @@ label {
     box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
+}
+
+.seltex {
+    margin-left: 40px;
 }
 
 .sell-form {
@@ -92,6 +96,8 @@ button[name="Publier"] {
     padding: 20px 10px;
     display: flex;
     gap: 15px;
+    margin: 20px;
+
 }
 
 .primary {
