@@ -125,12 +125,41 @@ body {
 
 /*--- RESPONSIVE MOBILE --- */
 @media (max-width: 768px) {
-    .container-main {
-        justify-content: center;
-        padding-right: 0;
+    /* navigation buttons stack */
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .nav-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
     }
 
-    .sell-form {
+    /* display-area cards take full width */
+    #display-area {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
         width: 90%;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .details {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .buy-link {
+        padding: 10px 30px;
+    }
+
+    /* adjust description box font for small screens */
+    .description-box {
+        font-size: 0.9em;
     }
 }

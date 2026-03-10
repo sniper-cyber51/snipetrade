@@ -1,5 +1,3 @@
-<html>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -43,7 +41,7 @@
     <Script>
         const sellForm = document.getElementById('sellForm');
         sellForm.addEventListener('submit', (event) => {
-            even.prevenDefault();
+            event.preventDefault();
             const productNameInput = document.getElementById('productName').value;
             const productDescriptionInput = document.getElementById('productDescription').value;
             const productPriceInput = document.getElementById('productPrice').value;
@@ -84,8 +82,8 @@
         }
         const form = document.querySelector('form');
         form.addEventListener('submit',
-            (even) => {
-                even.prevenDefault();
+            (event) => {
+                event.preventDefault();
                 sendDataViaAjax();
             });
 
